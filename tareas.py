@@ -22,15 +22,23 @@ class GestorTareas:
     def guardar(self):
         self.archivo.parent.mkdir(parents=True, exist_ok=True)
         temporal = self.archivo.with_suffix(".tmp")
-        temporal.write_text(json.dumps(self.tareas, ensure_ascii=False, indent=2), encoding="utf-8")
+        temporal.write_text(
+            json.dumps(self.tareas, ensure_ascii=False, indent=2),
+            encoding="utf-8"
+        )
         temporal.replace(self.archivo)
 
     def agregar(self, titulo):
         titulo = titulo.strip()
         if not titulo:
             raise ValueError("El título no puede estar vacío.")
-        tarea = {"id": max((t["id"] for t in self.tareas), default=0) + 1,
-                 "titulo": titulo, "completada": False}
+
+        tarea = {
+            "id": max((t["id"] for t in self.tareas), default=0) + 1,
+            "titulo": titulo,
+            "completada": True  # Error controlado: debería ser False.
+        }
+
         self.tareas.append(tarea)
         self.guardar()
         return tarea.copy()
