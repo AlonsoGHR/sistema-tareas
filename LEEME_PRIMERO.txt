@@ -1,0 +1,14 @@
+INICIO RÁPIDO
+1. Extrae TODO el ZIP (clic derecho > Extraer todo).
+2. Entra en sistema-tareas.
+3. Abre INICIAR.bat para usar el programa.
+4. Abre PROBAR.bat para comprobar las 8 pruebas.
+
+Requisito: Python 3.10 o superior instalado.
+No necesitas instalar librerías ni usar pip.
+Si Python no aparece, instala Python 3 desde https://www.python.org/downloads/ y marca Add python.exe to PATH.
+
+Las tareas se guardan en datos/tareas.json.
+No ejecutes desde dentro del ZIP.
+
+Después continuaremos con GitHub para obtener commits y evidencias reales.
