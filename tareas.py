@@ -36,7 +36,7 @@ class GestorTareas:
         tarea = {
             "id": max((t["id"] for t in self.tareas), default=0) + 1,
             "titulo": titulo,
-            "completada": True  # Error controlado: debería ser False.
+            "completada": False
         }
 
         self.tareas.append(tarea)
